@@ -1,0 +1,168 @@
+:root {
+    font-size: 24px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 5px 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 10%);
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: white;
+}
+
+section {
+    background: linear-gradient(
+        to bottom,
+        hsl(0, 0%, 96%),
+        hsl(0, 0%, 86%)
+    );
+    margin: 10px 0;
+    padding: 130px 0;
+}
+
+section:nth-of-type(even) {
+    background: linear-gradient(
+        to top,
+        hsl(0, 0%, 96%),
+        hsl(0, 0%, 86%)
+    );
+}
+
+section:first-of-type {
+    background: linear-gradient(
+        to bottom,
+        hsl(0, 0%, 100%),
+        hsl(0, 0%, 86%)
+    );
+    margin-top: 0;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+}
+
+section > *:first-child {
+    margin-top: 0;
+}
+
+section > *:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 10%);
+    margin-bottom: 1.3rem;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.48;
+    color: hsl(0, 0%, 50%);
+    margin-bottom: 0.7rem;
+}
+
+.text-wrapper {
+    width: min(90%, 900px);
+    margin: 100px auto;
+}
+
+img {
+    display: block;
+    width: min(90%, 900px);
+    margin: 0 auto;
+    pointer-events: none;
+}
+
+.cover-image-wrapper {
+    position: relative;
+    width: min(90%, 900px);
+    margin: 0 auto 130px;
+}
+
+.cover-image-wrapper img {
+    width: 100%;
+    pointer-events: none;
+}
+
+.cover-image-rendered {
+    position: absolute;
+    inset: 0;
+    animation: fadeIn 2.5s ease-in-out forwards;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 8px;
+    width: min(90%, 900px);
+    margin: 120px auto 20px;
+}
+
+.projects-grid figure {
+    position: relative;
+}
+
+.projects-grid img {
+    display: block;
+    width: 100%;
+}
+
+.projects-grid figcaption {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 0.4rem 0.6rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 10%);
+    background-color: hsla(0, 0%, 100%, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+.email {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 10%);
+    margin: 60px 0;
+}
+
+.email a {
+    font-weight: 500;
+    color: hsl(0, 0%, 10%);
+}
